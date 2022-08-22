@@ -1,13 +1,40 @@
 .weatherIcon {
-	width: 48px;
+	width: 40px;
 }
 
 .forecastItem {
-	margin: 4px 0;
+	margin-top: 1px;
+	font-size: 14px;
 }
 
-.forecastItemHeading {
+.container {
 	background-color: #607dd6;
 	padding: 0 12px;
 	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.rightContent {
+	width: 80%;
+}
+
+.rightContent > span {
+	width: 33.33%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.expandedContainer {
+	padding: 0 12px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #607ed688;
+}
+
+.expandedRightContent {
+	width: 80%;
 }

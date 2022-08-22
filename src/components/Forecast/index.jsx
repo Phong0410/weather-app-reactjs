@@ -61,10 +61,10 @@ const Forecast = ({ data }) => {
 		<Accordion allowZeroExpanded>
 			{forecastData?.map((item, index) => (
 				<AccordionItem key={index} className={styles.forecastItem}>
-					<AccordionItemHeading className={styles.forecastItemHeading}>
-						<AccordionItemButton>
+					<AccordionItemHeading>
+						<AccordionItemButton className={styles.container}>
 							<span>{item.date}</span>
-							<span>
+							<span className={styles.rightContent}>
 								{item.data.map((item, index) => (
 									<span key={index}>
 										<img
@@ -79,28 +79,30 @@ const Forecast = ({ data }) => {
 						</AccordionItemButton>
 					</AccordionItemHeading>
 					<AccordionItemPanel>
-						<span>Description</span>
-						<span>
-							{item.data.map((item, index) => (
-								<span key={index}>{item.description}</span>
-							))}
-						</span>
-					</AccordionItemPanel>
-					<AccordionItemPanel>
-						<span>Feels like</span>
-						<span>
-							{item.data.map((item, index) => (
-								<span key={index}>{item.feels_like} &#8451;</span>
-							))}
-						</span>
-					</AccordionItemPanel>
-					<AccordionItemPanel>
-						<span>Humidity</span>
-						<span>
-							{item.data.map((item, index) => (
-								<span key={index}>{item.humidity} %</span>
-							))}
-						</span>
+						<div className={styles.expandedContainer}>
+							<span>Description</span>
+							<div className={styles.rightContent}>
+								{item.data.map((item, index) => (
+									<span key={index}>{item.description}</span>
+								))}
+							</div>
+						</div>
+						<div className={styles.expandedContainer}>
+							<span>Feels like</span>
+							<span className={styles.rightContent}>
+								{item.data.map((item, index) => (
+									<span key={index}>{item.feels_like} &#8451;</span>
+								))}
+							</span>
+						</div>
+						<div className={styles.expandedContainer}>
+							<span>Humidity</span>
+							<span className={styles.rightContent}>
+								{item.data.map((item, index) => (
+									<span key={index}>{item.humidity} %</span>
+								))}
+							</span>
+						</div>
 					</AccordionItemPanel>
 				</AccordionItem>
 			))}

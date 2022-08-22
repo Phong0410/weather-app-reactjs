@@ -1,9 +1,7 @@
 .weather {
-	border-radius: 2px;
 	color: #fff;
 	background-color: #607dd6;
 	padding: 20px;
-	margin-top: 20px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -42,7 +40,7 @@
 
 .bottom {
 	margin: 20px;
-	width: 60%;
+	width: 75%;
 	min-width: 240px;
 }
 
