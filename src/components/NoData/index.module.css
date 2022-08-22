@@ -1,7 +1,8 @@
 .noData {
-	min-height: 200px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	font-size: 24px;
+	margin: 20px 0;
+}
+
+.emptyImg {
+	margin: 80px 0;
 }

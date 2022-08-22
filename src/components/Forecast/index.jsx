@@ -26,13 +26,6 @@ const normalizeData = (data) => {
 			temp: item.main.temp,
 			feels_like: item.main.feels_like,
 			humidity: item.main.humidity,
-			description: (() => {
-				const descriptionText = item.weather[0].description
-				if (descriptionText)
-					return (
-						descriptionText.charAt(0).toUpperCase() + descriptionText.slice(1)
-					)
-			})(),
 			icon: item.weather[0].icon
 		}))
 
@@ -41,7 +34,7 @@ const normalizeData = (data) => {
 
 		simplificatedData.forEach((item) => {
 			const dt = item.dt
-			const date = moment.unix(dt).format("dddd")
+			const date = moment.unix(dt).format("dddd").slice(0, 3)
 			if (forecastMap.has(date))
 				forecastMap.set(date, {
 					...forecastMap.get(date),
@@ -79,14 +72,6 @@ const Forecast = ({ data }) => {
 						</AccordionItemButton>
 					</AccordionItemHeading>
 					<AccordionItemPanel>
-						<div className={styles.expandedContainer}>
-							<span>Description</span>
-							<div className={styles.rightContent}>
-								{item.data.map((item, index) => (
-									<span key={index}>{item.description}</span>
-								))}
-							</div>
-						</div>
 						<div className={styles.expandedContainer}>
 							<span>Feels like</span>
 							<span className={styles.rightContent}>

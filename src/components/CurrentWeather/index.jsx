@@ -43,28 +43,24 @@ const CurrentWeather = ({ data }) => {
 					</div>
 					<div className={styles.bottom}>
 						<div className={styles.parameterRow}>
-							<span className={styles.parameterLabel}>Feels like</span>
-							<span className={styles.parameterValue}>
-								{weather.feels_like} &#8451;
-							</span>
+							<span>Feels like</span>
+							<span>{weather.feels_like} &#8451;</span>
 						</div>
 						<div className={styles.parameterRow}>
-							<span className={styles.parameterLabel}>Wind</span>
-							<span className={styles.parameterValue}>{weather.wind} m/s</span>
+							<span>Wind</span>
+							<span>{weather.wind} m/s</span>
 						</div>
 						<div className={styles.parameterRow}>
-							<span className={styles.parameterLabel}>Humidity</span>
-							<span className={styles.parameterValue}>
-								{weather.humidity} %
-							</span>
+							<span>Humidity</span>
+							<span>{weather.humidity} %</span>
 						</div>
 						<div className={styles.parameterRow}>
-							<span className={styles.parameterLabel}>Sunrise</span>
-							<span className={styles.parameterValue}>{weather.sunrise}</span>
+							<span>Sunrise</span>
+							<span>{weather.sunrise}</span>
 						</div>
 						<div className={styles.parameterRow}>
-							<span className={styles.parameterLabel}>Sunset</span>
-							<span className={styles.parameterValue}>{weather.sunset}</span>
+							<span>Sunset</span>
+							<span>{weather.sunset}</span>
 						</div>
 					</div>
 				</>

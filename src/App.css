@@ -2,4 +2,7 @@
 	width: 100%;
 	max-width: 420px;
 	margin: 0 auto;
+	height: 100vh;
+	background-color: #547fff;
+	overflow: scroll;
 }

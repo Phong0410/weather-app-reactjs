@@ -1,6 +1,5 @@
 .weather {
 	color: #fff;
-	background-color: #607dd6;
 	padding: 20px;
 	display: flex;
 	flex-direction: column;
@@ -47,10 +46,4 @@
 .parameterRow {
 	display: flex;
 	justify-content: space-between;
-}
-
-.parameterLabel {
-}
-
-.parameterValue {
 }
